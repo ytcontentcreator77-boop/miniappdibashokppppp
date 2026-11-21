@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "miniappdibashokppppp",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-12",
+  "observability": { "enabled": true },
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/bot", "/hooks/*", "/setup/*", "/media/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "Testok",
+      "database_id": "e87aba28-0139-4fa9-a1e9-6ba10703abd1",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": { "crons": ["* * * * *"] },
+  "vars": {
+    "BOT_TOKEN": "9243514774:AAGlPnsTa5W7Yf3tiiSQei4kosTQWegEheQ",
+    "DEV_FAKE_USER_ID": "7430104292",
+    "OWNER_IDS": "7062424671"
+  }
+}
